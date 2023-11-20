@@ -11,8 +11,6 @@ const Navigation = () => {
           <br></br>
           <NavLink to="/tictactoe">TicTacToe</NavLink>
           <br></br>
-          <br></br>
-          <br></br>
        </div>
     );
 }

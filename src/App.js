@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {Route, HashRouter, Routes } from 'react-router-dom';
  
 import Home from './components/Home';
 import Airbnb from './components/Airbnb';
@@ -10,17 +10,15 @@ import Navigation from './components/Navigation';
 class App extends Component {
   render() {
     return (
-       <BrowserRouter>
+       <HashRouter basename="/">
         <div>
           <Navigation />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Airbnb" element={<Airbnb />} />
-            <Route path="/TicTacToe" element={<TicTacToe />} />
+            <Route exact path="/" element={<Home />} />
+            <Route path="/airbnb" element={<Airbnb />} />
+            <Route path="/tictactoe" element={<TicTacToe />} />
             <Route path="*" element={<Error />} />
-          </Routes>
         </div> 
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
